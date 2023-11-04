@@ -34,3 +34,44 @@ console.log(removeSmallest([2, 2, 1, 2, 1]), [2, 2, 2, 1], "Wrong result for [2,
 
 ////////////////////////////////////////////////////////////////////////////
 
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// Examples input/output:
+
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+
+function XO(str) {
+  //code here
+  let newStr = str.toLowerCase()
+  let x = []
+  let o = []
+  for (let i = 0; i < str.length; i++){
+   if(newStr[i] === 'x') {
+    x.push(newStr[i])
+   }else if (newStr[i] === 'o'){
+    o.push(newStr[i])
+   }
+  }
+  return x.length === o.length
+}
+
+//test cases
+console.log(XO('xo'),true);
+console.log(XO('XO'),true);
+console.log(XO('xo0'),true);
+console.log(XO('xxxoo'),false);
+console.log(XO("xxOo"),true);
+console.log(XO(''),true,'Empty string contains equal amount of x and o');
+console.log(XO('xxxxxoooxooo'),true);
+console.log(XO("xxxm"),false);
+console.log(XO("ooom"),false);
+console.log(XO("Oo"),false);
+console.log(XO('abcdefghijklmnopqrstuvwxyz'),true,'Alphabet contains equal amount of x and o');
+console.log(XO("xxxxxxxooo"),false);
+
