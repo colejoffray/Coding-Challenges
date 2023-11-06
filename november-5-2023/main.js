@@ -73,3 +73,76 @@ console.log(likes(['Peter']), 'Peter likes this');
 console.log(likes(['Jacob', 'Alex']), 'Jacob and Alex like this');
 console.log(likes(['Max', 'John', 'Mark']), 'Max, John and Mark like this');
 console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']), 'Alex, Jacob and 2 others like this');
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//KATA 4 7kyu
+// Story
+// Your online store likes to give out coupons for special occasions. Some customers try to cheat the system by entering invalid codes or using expired coupons.
+
+// Task
+// Your mission:
+// Write a function called checkCoupon which verifies that a coupon code is valid and not expired.
+
+// A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
+
+// Examples:
+// checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  true
+// checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")  ===  false
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+    cd  = new Date(currentDate)
+    expD = new Date(expirationDate)
+    
+    return enteredCode === correctCode && cd <= expD
+  }
+
+  //test cases 
+  console.log(checkCoupon('123','123','September 5, 2014','October 1, 2014'), true);
+  console.log(checkCoupon('123a','123','September 5, 2014','October 1, 2014'), false);
+
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  //KATA 5 7kyu
+
+  var greet = function(name) {
+      greeting = name.toLowerCase().split('').map((x,i) => x[i] ? x[i].toUpperCase() : x ).join('')
+      
+      return `Hello ${greeting}!`
+    };
+    
+
+//test cases 
+console.log(greet('molly'), "Hello Molly!");
+console.log(greet('BILLY'), "Hello Billy!");
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//KATA 6 8kyu
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+
+function doubleChar(str) {
+    // Your code here
+    let arr = []
+    for (let i = 0; i < str.length; i++){
+      arr.push(str[i], str[i])
+    }
+  return arr.join('')
+  }
+
+//test cases 
+console.log(doubleChar("abcd"), "aabbccdd");
+console.log(doubleChar("Adidas"), "AAddiiddaass");
+console.log(doubleChar("1337"), "11333377");
+console.log(doubleChar("illuminati"), "iilllluummiinnaattii");
+console.log(doubleChar("123456"), "112233445566");
+console.log(doubleChar("%^&*("), "%%^^&&**((");
+  
+
