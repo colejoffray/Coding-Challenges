@@ -122,6 +122,7 @@ console.log(greet('BILLY'), "Hello Billy!");
 //KATA 6 8kyu
 
 // Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+///////
 
 // Examples (Input -> Output):
 // * "String"      -> "SSttrriinngg"
@@ -144,5 +145,8 @@ console.log(doubleChar("1337"), "11333377");
 console.log(doubleChar("illuminati"), "iilllluummiinnaattii");
 console.log(doubleChar("123456"), "112233445566");
 console.log(doubleChar("%^&*("), "%%^^&&**((");
+
+
+console.log('hello world')
   
 
