@@ -35,8 +35,47 @@ function reverseFizzBuzz(array) {
   };
 
 //test cases
-console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
-console.log(reverseFizzBuzz([1,2,"Fizz",4,"Buzz"]), [3,5]);
-console.log(reverseFizzBuzz([1,"Fizz","Buzz","Fizz",5,"FizzBuzz"]), [2,3]);
-console.log(reverseFizzBuzz([1,"FizzBuzz",3,"FizzBuzz",5,"FizzBuzz"]), [2,2]);
-console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
+// console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
+// console.log(reverseFizzBuzz([1,2,"Fizz",4,"Buzz"]), [3,5]);
+// console.log(reverseFizzBuzz([1,"Fizz","Buzz","Fizz",5,"FizzBuzz"]), [2,3]);
+// console.log(reverseFizzBuzz([1,"FizzBuzz",3,"FizzBuzz",5,"FizzBuzz"]), [2,2]);
+// console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//KATA 2  6kyu
+
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+// Additionally, if the number is negative, return 0.
+
+// Note: If the number is a multiple of both 3 and 5, only count it once.
+
+// Courtesy of projecteuler.net (Problem 1)
+
+function solution(number){
+    const arr = [] //where we'll store all multiples
+    for(let i = 0; i < number; i++){
+        if(i % 3 === 0 || i % 5 === 0){
+            arr.push(i)
+        }
+    }
+    return arr.reduce((acc,c) => acc + c, 0)
+  }
+
+//test cases
+console.log(solution(10), 23);
+console.log(solution(6), 8);
+console.log(solution(4), 3);
+console.log(solution(-1), 0);
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//KATA 3 6kyu
+
+
