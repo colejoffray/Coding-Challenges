@@ -48,3 +48,37 @@ function array(string) {
   //test cases 
   console.log(array('A1,B2,C3,D4,E5'), 'B2 C3 D4');
   console.log(array('A,1,23,456,78,9,Z'), '1 23 456 78 9');
+
+  //////////  /////////  //////////  //////////  //////////  //////////  //////////  //////////  //////////  //////////
+
+
+  //KATA 3
+
+  
+
+//   Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
+
+//   If they are, change the array value to a string of that vowel.
+  
+//   Return the resulting array.
+
+function isVow(a){
+    const vowels = 'aeiou'
+    let arr = []
+    for(let i = 0; i < a.length; i++){
+      let num = a[i]
+      for(let j = 0; j < vowels.length; j++){
+        if(num === vowels.charCodeAt(j)) {
+          a[i] = vowels[j]
+        }
+      }
+    }
+    return a
+  }
+
+console.log(isVow([118,117,120,121,117,98,122,97,120,106,104,116,113,114,113,120,106]),[118,"u",120,121,"u",98,122,"a",120,106,104,116,113,114,113,120,106]);
+
+console.log(isVow([101,121,110,113,113,103,121,121,101,107,103]),["e",121,110,113,113,103,121,121,"e",107,103]);
+
+console.log(isVow([100,100,116,105,117,121 ]),[100,100,116,"i","u",121]);
+
