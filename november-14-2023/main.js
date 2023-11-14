@@ -35,11 +35,11 @@ function reverseFizzBuzz(array) {
   };
 
 //test cases
-// console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
-// console.log(reverseFizzBuzz([1,2,"Fizz",4,"Buzz"]), [3,5]);
-// console.log(reverseFizzBuzz([1,"Fizz","Buzz","Fizz",5,"FizzBuzz"]), [2,3]);
-// console.log(reverseFizzBuzz([1,"FizzBuzz",3,"FizzBuzz",5,"FizzBuzz"]), [2,2]);
-// console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
+console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
+console.log(reverseFizzBuzz([1,2,"Fizz",4,"Buzz"]), [3,5]);
+console.log(reverseFizzBuzz([1,"Fizz","Buzz","Fizz",5,"FizzBuzz"]), [2,3]);
+console.log(reverseFizzBuzz([1,"FizzBuzz",3,"FizzBuzz",5,"FizzBuzz"]), [2,2]);
+console.log(reverseFizzBuzz(["Fizz","Fizz","Fizz","Fizz","Fizz","FizzBuzz"]), [1,6]);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -67,10 +67,10 @@ function solution(number){
   }
 
 //test cases
-// console.log(solution(10), 23);
-// console.log(solution(6), 8);
-// console.log(solution(4), 3);
-// console.log(solution(-1), 0);
+console.log(solution(10), 23);
+console.log(solution(6), 8);
+console.log(solution(4), 3);
+console.log(solution(-1), 0);
 
 
 
@@ -98,10 +98,10 @@ function findOdd(A) {
 
 
   //test cases
-// console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]), 4);
-// console.log(findOdd([0,1,0,1,0]) , 0);
-// console.log(findOdd([1,1,2]), 2);
-// console.log(findOdd([0]) , 0);
+console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]), 4);
+console.log(findOdd([0,1,0,1,0]) , 0);
+console.log(findOdd([1,1,2]), 2);
+console.log(findOdd([0]) , 0);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -130,3 +130,4 @@ function digitalRoot(n){
 //test cases 
 console.log(digitalRoot(16), 7);
 console.log(digitalRoot(456), 6);
+
