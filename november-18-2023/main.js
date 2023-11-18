@@ -22,3 +22,5 @@ function duplicateCount(text){
 console.log(duplicateCount('AAbBcC'), 3);
 console.log(duplicateCount("Indivisibility"), 1);
 console.log(duplicateCount("aabbcde"), 2);
+
+
