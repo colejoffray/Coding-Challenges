@@ -49,6 +49,18 @@ function stray(numbers) {
     return count 
 }
 
+function getDivisorsCnt(n){
+  let count = 0
+  let numOfDivisors = 0
+  while(count <= n){
+    if(n % count  === 0){
+      numOfDivisors ++
+      count ++
+    }
+    count ++
+  }
+  return numOfDivisors
+}
 
 //test cases 
 console.log(getDivisorsCnt(4), 3);
