@@ -64,5 +64,10 @@ console.log(isPangram("The quick brown fox jumps over the lazy dog."), true);
 console.log(isPangram("Cwm fjord bank glyphs vext quiz"), true);
 console.log(isPangram("This isn't a pangram!"), false);
 console.log(isPangram("Detect Pangram"), false);
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   
   
