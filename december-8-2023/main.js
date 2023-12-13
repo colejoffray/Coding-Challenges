@@ -34,3 +34,4 @@ function arithmetic(a, b, operator){
 
   //test cases 
   console.log(arithmetic(1, 2, "subtract"), 3);
+  console.log(arithmetic(5,5,'multiply'), 25);
