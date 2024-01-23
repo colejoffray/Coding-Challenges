@@ -59,3 +59,52 @@ String.prototype.camelCase=function(){
 
 let str = 'camel case'
 console.log(str.camelCase())
+
+
+
+function scramble(str1, str2) {
+    let occurences = {}
+
+   for (const letter of str2){
+    if(occurences[letter]) occurences[letter]++
+    else occurences[letter] = 1
+    }
+
+    for(const letter of str1){
+        if(occurences[letter] && occurences[letter] !== 0) {
+            occurences[letter]--
+    }
+  }
+  
+    for(key in occurences){
+        if(occurences[key] !== 0) return false
+    }
+    return true
+}
+
+
+console.log(scramble('hbnfhgtyeeellmnghdbo', 'hello'))
+
+
+function scramble(str1, str2){
+    let occurences = {}
+    for(letter of str2){
+        if(occurences[letter]) occurences[letter]++
+        else occurences[letter] = 1
+    }
+
+    for(letter of str1){
+        if(occurences[letter] && occurences[letter] !== 0){
+            occurences[letter]--
+        }
+    }
+
+    for(key in occurences){
+        if(occurences[key] !== 0) return false
+    }
+
+    return true
+}
+
+
+console.log(scramble('efghmcnxoir', 'firefox'))
